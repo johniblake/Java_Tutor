@@ -1,0 +1,166 @@
+Welcome to JavaTutor, a Java tutorial for students who have some familiarity and practice with Python.
+
+The Basics:
+- HelloWorld.java
+- how to compile and run a java program.
+- What's with all of the extra syntax?
+- command line arguments.
+
+Bringing Python to Java:
+- declaring variables
+- for loops
+- conditionals
+- ArrayLists
+
+** Basic Algorithms to implement:
+- populate an array and sum its elements.
+- write an algorithm that adds 1's to the even indices of an array and 0's to the odd indices & prints the array.
+- perform Selection, Insertion, or Merge Sort on a given arrayList.
+
+
+Object Orientation:
+- Write Classes
+- Class Methods & Variables
+- Interface
+
+** Basic Algorithms to implement using Classes, Class Variables & Interfaces
+- People objects w/ "height" variable, find average height over all people
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+0.1) Observe the following "Hello, World!" programs in both Python and Java.
+[side by side code here]
+
+It is clear right away that there are some differences between the two. For one, Java requires a bit more code to run than Python does. Don't worry, this code will make sense soon enough.
+
+Just as you've seen in Python, Java objects can be separated into "classes". In order for a Java program to run, it MUST be within a class named after the file that contains it. Additionally, you will see that we have defined a main method within this class. A main is required for the compiler to recognize which code it is to run first within the class file. For our purposes, code inside a class will not run unless called upon to do so my the main method, or code run by the main method. There are a few more things to note about the main method, but we'll cover that in a minute! First, Let's get things running!
+
+To run a python program, you'll remember, one simply enters: "python program_name.py" and the code will run. In java, it is not that simple. The code must first be compiled into a runnable ".class file". For the helloWorld.java program above this will look like this: "javac helloWorld.java". This program can then be run like so: "java helloWorld". You'll notice that a new file has been created in your working directory. This is the class file that is run by the Java Virtual Machine.
+
+Now, you'll notice the main method in the helloWorld.java program takes the argument "String[] args". This means that if you want, you can specify arguments to give the program upon running it, and it will interpret them as a list of strings. For example: "java helloWorld test1 test2" would give the main method the list ["test1","test2"] stored in the variable Args. Since we haven't told the main method how to handle any arguments, this will not change how the program runs. But suppose we modified the code to look like the following:
+
+[HelloWorld2.java]
+
+This program requires that one argument be entered after "java HelloWorld". Suppose that you entered the world "Bob" as your argument, what would the output look like?
+
+[answer field]
+
+
+1. Creating Objects and Type Declaration:
+
+At this point you may have noticed that creating variables in Java is not the same as creating them in Python. You may have also noticed that every statement ends in a semicolon. We'll get back to that later. Java is considered a "strongly typed" language in that it requires all variables to have a specified type upon declaration. For example if one wanted to store a string in a new variable called "name", one would write:
+
+    String name = "some string here";
+
+If you wanted to create a variable called "number" to store the integer 1, you would write:
+
+    int number = 1;
+
+You may look at the Java documentation[add hyperlink] to find a complete list of common object types recognized by Java.
+
+Check 1: The following program should add two integers a and b and print the outcome. Fill in the empty or incomplete lines so that it does so.
+
+[intSum.java]
+
+Enter the missing lines:
+line 5:
+line 6:
+
+2. Lists and For Loops:
+
+Lists:
+
+An important datatype in java is the array. Declaring an array of integers looks like the following:
+    // declares an array of integers
+    int[] anArray;
+
+    // allocates memory for 10 integers
+    anArray = new int[10];
+
+    // initialize first element
+    anArray[0] = 100;
+    // initialize second element
+    anArray[1] = 200;
+    // and so forth
+    anArray[2] = 300;
+    anArray[3] = 400;
+    anArray[4] = 500;
+    anArray[5] = 600;
+    anArray[6] = 700;
+    anArray[7] = 800;
+    anArray[8] = 900;
+    anArray[9] = 1000;
+
+What do you think the output would be if we decided to print anArray[7]?
+
+[response]
+
+What if I wanted to create an array of 10 Strings called stringArray? Enter this line of code below:
+
+[response]
+
+ArrayLists:
+
+Arrays in Java have some limitations. Namely, they require users to declare their size upon instantiation, or to instantiate them with a given list of items. An array's size in Java is not dynamic like in Python, so they cannot resize themselves when necessary. Java's ArrayList object solves this problem. Read about ArrayLists and how to instantiate them here: http://www.tutorialspoint.com/java/java_arraylist_class.htm
+
+For simplicity's sake we will use ArrayLists throughout the rest of the tutorial.
+
+For Loops:
+
+Now, say I want to loop over an arrayList and manipulate its elements. How would I do that? For Loops are the answer! For Loops in Java behave the same as they do in Python but require slightly different syntax.
+
+[side by side comparison of python and Java for loops][java example_04][python example_04]
+
+You may notice the curly braces at the start and end of the for loop in Java. This is the equivalent to an indent in Python and can be seen around the code inside a class and method in Java as well. The end curly brace on the signals to the compiler that the "indented section" is over, just as the beginning curly brace signals its beginning.
+
+So, how would one loop over an arrayList in Java? The sample code below prints out the strings stored at each index of the array. See if you can figure out how it works:
+
+[java example_05]
+
+What would the output be if the code were adjusted to read:
+
+    for (i = 0; i < 3; i++){
+
+in line 7?
+
+[response]
+
+What will be the printed output of the following program?
+
+[java example_06]
+
+[response]
+
+From the first example, what if we only want to print the elements in the odd indices of the array? Just as in Python, we need the conditional "if" statement to do that.
+
+[Java and Python example_07]
+
+Write a program called OneEvenSum.java that is exactly the same as you wrote for part one, but uses the conditional "if" to add only the elements of the array who's indices are divisible by 2. This program should print the resulting integer as output.
+
+Bringing it All Together:
+
+    Write a program that sorts the integer array {3,6,10,1,11,34,16} using the selection sort algorithm you learned in CS 111. If you need a refresher on the specifics of selection sort look here [include link to a selection sort tutorial]. The output of this program should be the sorted array.
+    (fill in the blanks)
+
+3. Classes, Class Methods & Variables
+
+  Introduce Class Objects through a worked exercise that creates a number of "Person" objects with the class variable height. Use this to introduce the idea of the constructor and its syntax. Then add to the "Person" class methods for getting the height of the person. Discuss return types and visibility here? Problems should include properly setting and getting the height of a specific person object, and finding the average height of a group of "Person" objects.
+
+  In this section we demonstrate how to write Classes and  Objects in Java as you learned to do in Python. Recall that in Python, classes are constructed like so:
+
+  [Python example_02]
+
+  In this example, the class is called Person and it has the class variable s. The constructor requires the parameter 'h'. In the constructor, the 'height' variable of the Person object is set to be the value of the parameter h. 'Person' has one function, namely, 'printHeight', which prints the height of the Person object. In the main function we 'instantiate' a Person object called 'guy' with a height of 5 and then print the height of 'guy' using printHeight(). Here is the equivalent code in Java side by side with the python code:
+
+  [Python example_02, Java example_08]
+
+  There are a few key differences to note right away.
+
+
+4. Interfaces & Subclasses
+
+  Talk about the conceptual need for interfaces, show an interface and a class that implements it. Prompt students to write a class that implements a simple provided interface. Introduce the concept of polymorphism and ask students questions about why interfaces are necessary and how they help to uphold the principles of polymorphism. Introduce subclasses and have student write classes that implement simple classes and override certain methods. Exercises and examples should include test code like this http://beginnersbook.com/2014/01/method-overriding-in-java-with-example/ and ask students to answer questions about output, or in some places fill in missing code.
+
+5. Tie it all together:
+
+  Provide a class Human with the class variable weight. Have students create two classes, Adult and Child that extend Human and give those classes additional class variables and methods (to be determined) that should at the very least include getters and setters and a print function. Create a list of Humans with random weights, and then sort them in order of decreasing weight. use the overridden print functions of Child and Adult to print the items in the sorted array of Humans.
