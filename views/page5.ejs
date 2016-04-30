@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<!--
+	Striped by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<% include templates/header.ejs %>
+	</head>
+	<body>
+
+		<!-- Content -->
+			<div id="content">
+				<div class="inner">
+
+					<!-- Post -->
+          <article class="box post post-excerpt">
+            <header>
+              <h2><a href="#">Inheritence, Interfaces and Subclasses</a></h2>
+            </header>
+            <p>
+            Clasees are really cool because they allow you to store data and specify operations that can be performed on that data. What if, however, we want to create an object that utilizes all of the same methods and data of one class, but also store additional data and methods for manipulating that data? In essence, what if we wanted to write a class that inherits all properties from some other class, while at the same time having unique properties of its own? This concept is called Inheritence, and it is at the core of what makes Object Orientation so useful.
+          </p>
+
+          <p>
+            Subclasses:<br>
+            <br>
+            The class which inherits properties from another class is called a subclass, while the class whose properties are inherited is known as the superclass. In order to express that we want our class to inherit the properties of another class, we use the "extends" keyword like so:
+          </p>
+            [Java Example 12]
+            <div id ="java_editor_12"></div>
+          <p>
+            Below is example code to walk you through the creation of a subclass of Person, called Parent.
+          </p>
+
+            [Java Example 13]
+            <div id ="java_editor_13"></div>
+          <p>
+            The compiled code will produce the following result:<br>
+            <br>
+            Name: Mom<br>
+            Height: 6<br>
+            Age: 35<br>
+            <br>
+          </p>
+          <p>
+            The Superclass reference variable can hold the subclass object, but using that variable you can access only the members of the superclass, so to access the members of both classes it is recommended to always create reference variable to the subclass.
+          </p>
+          <p>
+            If you consider the above program you can instantiate the class as given below as well. But using the superclass reference variable ( person in this case ) you cannot call the method setAge(), which belongs to the subclass Parent.
+          </p>
+          <p>
+            Something to note here is that, while a subclass inhereits all methods, fields, and nested classes of a superclass, it does not inherit its constructor. However, the constructor of a superclass can be invoked from the subclass. This is done using the "super" keyword. If a class is inheriting the properties of another class. And if the members of the superclass have the names same as the sub class, to differentiate these variables we use super keyword like so:<br>
+            <br>
+            super.variable<br>
+            super.method();<br>
+            <br>
+          </p>
+          <p>
+            The following program uses the super keyword to call the contructor of the Person class from the Parent subclass.
+          </p>
+          <div id ="java_editor_15"></div>
+
+            Is-A relationship?
+
+            Has-A relationship?
+
+          <p>
+            It is important to note that the only possible way to access an object (Parent) is through a reference variable (mom). A reference variable can be of only one type (in this case Parent). Once declared, the type of a reference variable cannot be changed. However, the reference variable can be reassinged to access another object given that that object is of the same type or a subtype of its declared type.
+          </p>
+          <p>
+            Write a program called Child.java, where Child is a subclass of Person. Give Child some attributes and methods
+          </p>
+          <p>
+          Interfaces:<br>
+          <br>
+          <p>
+            An interface is another reference type in Java. Similar to class, it is a collection of abstract methods. A class "implements" an interface in order to inherit the abstract methods of the interface.<br>
+            <br>
+            An interface looks like this:
+          </p>
+          <div id ="java_editor_16"></div>
+          <p>
+            Writing an interface is similar to writing a class. A class describes the attributes and behaviours of an object. An interface just describes behaviours (methods) that a class implements.
+          </p>
+          <p>
+            Think of an interface like a contract. If a class implements an interface, all the methods of the interface need to be defined in the class. If they are not, the class must be declared abstract. More on this here: http://www.tutorialspoint.com/java/java_abstraction.htm
+          </p>
+          <p>
+            The following code shows the interface Pet, and its implementation by the class Dog.
+          </p>
+          <div id ="java_editor_17_1"></div>
+          <div id ="java_editor_17_2"></div>
+          [example_17 Pet.java]
+          [example_17 Dog.java]
+          <p>
+            The Output of this example will be:<br>
+            <br>
+            You have fed your dog.<br>
+            You ware playing fetch with your dog.<br>
+          </p>
+          </article>
+
+					<!-- Pagination -->
+						<div class="pagination">
+							<!--<a href="#" class="button previous">Previous Page</a>-->
+							<a href="/page4" class="button next">Classes, Objects, Class Methods & Variables</a>
+						</div>
+
+				</div>
+			</div>
+
+		<!-- Sidebar -->
+			<% include templates/sidebar.ejs %>
+
+		<!-- Scripts -->
+      <% include templates/default_scripts.ejs %>
+			<script>
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_12/InheritanceExample.java","java_editor_12"]);
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_13/Parent.java","java_editor_13"]);
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_14/Parent.java","java_editor_14"]);
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_15/Parent.java","java_editor_15"]);
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_16/Interface.java","java_editor_16"]);
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_17/Pet.java","java_editor_17_1"]);
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_17/Dog.java","java_editor_17_2"]);
+
+        setEditor.init(["java_editor_12","java"]);
+				setEditor.init(["java_editor_13","java"]);
+				setEditor.init(["java_editor_14","java"]);
+				setEditor.init(["java_editor_15","java"]);
+				setEditor.init(["java_editor_16","java"]);
+				setEditor.init(["java_editor_17_1","java"]);
+				setEditor.init(["java_editor_17_2","java"]);
+			</script>
+
+	</body>
+</html>

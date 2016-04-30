@@ -1,0 +1,48 @@
+<div id="sidebar">
+
+  <!-- Logo -->
+  <div id="sidebaritems">
+    <h1 id="logo"><a href="#">Sections</a></h1>
+
+  <!-- Nav -->
+    <nav id="nav">
+      <% include navigation.ejs %>
+    </nav>
+
+  <!-- Search -->
+    <section class="box search">
+      <form method="post" action="#">
+        <input type="text" class="text" name="search" placeholder="Search" />
+      </form>
+    </section>
+  </div>
+
+  <!-- Copyright -->
+    <ul id="copyright">
+      <li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+
+</div>
+
+<script>
+  $(function() {
+
+      var $sidebaritems   = $("#sidebaritems"),
+          $window    = $(window),
+          offset     = $sidebaritems.offset(),
+          topPadding = 40;
+
+      $window.scroll(function() {
+          if ($window.scrollTop() >= offset.top) {
+              $sidebaritems.stop().animate({
+                  marginTop: $window.scrollTop() - offset.top + topPadding
+              });
+          } else {
+              $sidebaritems.stop().animate({
+                  marginTop: 0
+              });
+          }
+      });
+
+  });
+</script>

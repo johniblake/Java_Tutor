@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<!--
+	Striped by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<% include templates/header.ejs %>
+	</head>
+	<body>
+
+		<!-- Content -->
+			<div id="content">
+				<div class="inner">
+
+					<!-- Post -->
+          <article class="box post post-excerpt">
+            <header>
+              <h2><a href="#">Creating Objects and Type Declaration:</a></h2>
+            </header>
+            <p>
+              At this point you may have noticed that creating variables in Java is not the same as creating them in Python. You may have also noticed that every statement ends in a semicolon. We'll get back to that later. Java is considered a "strongly typed" language in that it requires all variables to have a specified type upon declaration. For example if one wanted to store a string in a new variable called "name", one would write:
+            </p>
+            <!-- Text -->
+            <section class="box text-style1">
+              <div class="inner">
+                <p>
+                  String name = "some string here";
+                </p>
+              </div>
+            </section>
+            <p>
+              If you wanted to create a variable called "number" to store the integer 1, you would write:
+            </p>
+            <section class="box text-style1">
+              <div class="inner">
+                <p>
+                  int number = 1;
+                </p>
+              </div>
+            </section>
+          <p>
+            You may look at the Java documentation[add hyperlink] to find a complete list of common object types recognized by Java.
+          </p>
+          <p>
+            Check 1: The following program should add two integers a and b and print the outcome. Fill in the empty or incomplete lines so that it does so.
+          </p>
+          <div id = "java_editor_03"></div>
+          <p>
+            Line 6:
+          </p>
+          <!-- Answer -->
+          <section class="box search">
+            <form method="post" action="#">
+              <input type="text" class="text" name="search" placeholder="Answer" />
+            </form>
+          </section>
+          <p>
+            Line 7:
+          </p>
+          <!-- Answer -->
+          <section class="box search">
+            <form method="post" action="#">
+              <input type="text" class="text" name="search" placeholder="Answer" />
+            </form>
+          </section>
+
+          </article>
+
+					<!-- Pagination -->
+						<div class="pagination">
+							<!--<a href="#" class="button previous">Previous Page</a>-->
+							<a href="/" class="button next">Introduction</a>
+							<a href="/page3" class="button next">Lists and For Loops</a>
+						</div>
+
+				</div>
+			</div>
+
+		<!-- Sidebar -->
+			<% include templates/sidebar.ejs %>
+
+		<!-- Scripts -->
+      <% include templates/default_scripts.ejs %>
+			<script>
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_03/intSum.java","java_editor_03"]);
+
+				setEditor.init(["java_editor_03","java"]);
+			</script>
+
+	</body>
+</html>

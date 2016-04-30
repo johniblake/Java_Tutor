@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<!--
+	Striped by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<% include templates/header.ejs %>
+	</head>
+	<body>
+
+		<!-- Content -->
+			<div id="content">
+				<div class="inner">
+
+					<!-- Post -->
+          <article class="box post post-excerpt">
+            <header>
+              <h2><a href="#">Classes, Objects, Class Methods & Variables:</a></h2>
+            </header>
+            <p>
+              In this section we demonstrate how to write Classes and Objects in Java as you learned to do in Python. Recall that in Python, classes are constructed like so:
+            </p>
+            <div id="python_editor_02"></div>
+            <p>
+              In this example, the class is called Person and it has the class variable height. The constructor requires the parameter 'h'. In the constructor, the 'height' variable of the Person object is set to be the value of the parameter h. 'Person' has one function, namely, 'printHeight', which prints the height of the Person object. In the main function we 'instantiate' a Person object called 'guy' with a height of 5 and then print the height of 'guy' using printHeight(). Here is the equivalent code in Java side by side with the python code:
+            </p>
+            <div id="python_editor_02_1"></div>
+            <div id="java_editor_08"></div>
+            <p>
+                Take a second to read through and notice some of the syntax differences between the way classes, variables, and functions are declared in Java versus Python.
+            </p>
+            <p>
+              In the Java code above, the constructor is named after the class (i.e. "Person()" instead of "__init__()") and takes only the parameter h, which is an integer. As in Python, at least one constructor must be invoked upon creating a new class object.
+            </p>
+            <p>
+              You may be asking yourself: What's with the words "Public" and "void" in the method declaration? What do they do? "Public" specifies that the method can be called from outside of the class. If the modifier were to instead be "Private", the method could only be accessed from other methods inside the class. The "void" portion is the return type of the method. In this case, the method returns nothing so we specify that its return type be "void". Say for example, your method returned an Integer. We would speficy this keyword to be "Integer". Now, how might we construct an Object from a class?
+            </p>
+            <p>
+              There are three steps when creating an object from a class:<br>
+                <br>
+                <b>Declaration:</b> A variable declaration with a variable name with an object type.<br>
+                <br>
+                <b>Instantiation:</b> The 'new' key word is used to create the object.<br>
+                <br>
+                <b>Initialization:</b> The 'new' keyword is followed by a call to a constructor. This call initializes the new object.<br>
+            </p>
+            <p>
+              Here is some example code for creating a new Person object:
+            </p>
+            <div id="java_editor_09"></div>
+            <p>
+              This code creates a Person object named "guy" with a height of 5.
+            </p>
+            <p>
+              Instance variables and methods are accessed via created objects. To access an instance variable the steps are as follows:
+            </p>
+            <div id="java_editor_10"></div>
+            <p>
+            This example will walk you through how to access instance variables and methods of a class:
+            </p>
+            <div id ="java_editor_11"></div>
+            <p>
+              If we compile and run the program above, what will its output would be? Seperate any linebreaks with a space.<br>
+              <br>
+              [response]
+            </p>
+            <p>
+              Write a version of Person.java that creates an arrayList of 5 People Objects and sorts them according to height, printing their names from tallest person to the shortest. The people objects should have the following name, height values: (George: 5), (Jen: 6), (Otis: 4}), (Max: 7), (Amy: 8).
+            </p>
+
+          </article>
+
+					<!-- Pagination -->
+						<div class="pagination">
+							<!--<a href="#" class="button previous">Previous Page</a>-->
+							<a href="/page3" class="button next">Lists and For Loops</a>
+							<a href="/page5" class="button next">Inheritence, Interfaces and Subclasses</a>
+						</div>
+
+				</div>
+			</div>
+
+		<!-- Sidebar -->
+			<% include templates/sidebar.ejs %>
+
+		<!-- Scripts -->
+      <% include templates/default_scripts.ejs %>
+			<script>
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/python/example_02/person.py","python_editor_02"]);
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/python/example_02/person.py","python_editor_02_1"]);
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_08/Person.java","java_editor_08"]);
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_09/Person.java","java_editor_09"]);
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_10/Instance.java","java_editor_10"]);
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_11/Person.java","java_editor_11"]);
+
+        setEditor.init(["python_editor_02","python"]);
+        setEditor.init(["python_editor_02_1","python"]);
+        setEditor.init(["java_editor_08","java"]);
+        setEditor.init(["java_editor_09","java"]);
+        setEditor.init(["java_editor_10","java"]);
+        setEditor.init(["java_editor_11","java"]);
+			</script>
+
+	</body>
+</html>

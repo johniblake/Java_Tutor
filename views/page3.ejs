@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<!--
+	Striped by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<% include templates/header.ejs %>
+	<body>
+
+		<!-- Content -->
+			<div id="content">
+				<div class="inner">
+
+					<!-- Post -->
+          <article class="box post post-excerpt">
+            <header>
+              <h2><a href="#">Lists and For Loops:</a></h2>
+            </header>
+            <p>
+              An important datatype in java is the array. Declaring an array of integers looks like the following:
+            </p>
+            <div id = "java_editor_03_1"></div>
+            <p>
+              What do you think the output would be if we decided to print anArray[7]?
+            </p>
+            <!-- Answer -->
+            <section class="box search">
+              <form method="post" action="#">
+                <input type="text" class="text" name="search" placeholder="Answer" />
+              </form>
+            </section>
+            <p>
+              What if I wanted to create an array of 10 Strings called stringArray? Enter this line of code below:
+            </p>
+            <!-- Answer -->
+            <section class="box search">
+              <form method="post" action="#">
+                <input type="text" class="text" name="search" placeholder="Answer" />
+              </form>
+            </section>
+            <p>
+              ArrayLists:
+
+              Arrays in Java have some limitations. Namely, they require users to declare their size upon instantiation, or to instantiate them with a given list of items. An array's size in Java is not dynamic like in Python, so they cannot resize themselves when necessary. Java's ArrayList object solves this problem. Read about ArrayLists and how to instantiate them here: http://www.tutorialspoint.com/java/java_arraylist_class.htm
+
+              For simplicity's sake we will use ArrayLists throughout the rest of the tutorial.
+            </p>
+            <p>
+              Now, say I want to loop over an arrayList and manipulate its elements. How would I do that? For Loops are the answer! For Loops in Java behave the same as they do in Python but require slightly different syntax. Observe the following side-by-side Python and Java code:
+            </p>
+            <div id = "python_editor_04"></div>
+            <div id = "java_editor_04"></div>
+            <p>
+              You may notice the curly braces at the start and end of the for loop in Java. This is the equivalent to an indent in Python and can be seen around the code inside a class and method in Java as well. The end curly brace on the signals to the compiler that the "indented section" is over, just as the beginning curly brace signals its beginning.
+            </p>
+            <p>
+              So, how would one loop over an array in Java? The sample code below prints out the strings stored at each index of the array. See if you can figure out how it works:
+            </p>
+            <div id="java_editor_05"></div>
+            <p>
+              What would the output be if the code were adjusted to read:
+            </p>
+
+            <p>
+                  for (i = 0; i < 3; i++){
+            </p>
+            <p>
+              in line 7?
+            </p>
+
+              [response]
+            <p>
+              What will be the printed output of the following program?
+            </p>
+
+            <div id="java_editor_06"></div>
+
+              [response]
+            <p>
+              From the first example, what if we only want to print the elements in the odd indices of the array? Just as in Python, we need the conditional "if" statement to do that.
+            </p>
+            <div id="python_editor_07"></div>
+            <div id="java_editor_07"></div>
+            <p>
+              Write a program called OneEvenSum.java that is exactly the same as you wrote for part one, but uses the conditional "if" to add only the elements of the array who's indices are divisible by 2. This program should print the resulting integer as output.
+            </p>
+          </article>
+					<!-- Pagination -->
+						<div class="pagination">
+							<!--<a href="#" class="button previous">Previous Page</a>-->
+							<a href="/page2" class="button next">Creating Objects and Type Declaration</a>
+							<a href="/page4" class="button next">Classes, Objects, Class Methods & Variables</a>
+						</div>
+
+				</div>
+			</div>
+
+		<!-- Sidebar -->
+			<% include templates/sidebar.ejs %>
+
+		<!-- Scripts -->
+      <% include templates/default_scripts.ejs %>
+			<script>
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_03_1/Arrays.java","java_editor_03_1"]);
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/python/example_04/forLoop.py","python_editor_04"]);
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_04/ForLoop.java","java_editor_04"]);
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_05/ArrayIterator.java","java_editor_05"]);
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_06/ArraySum.java","java_editor_06"]);
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/python/example_07/ifExample.py","python_editor_07"]);
+        getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_07/IfExample.java","java_editor_07"]);
+
+        setEditor.init(["java_editor_03_1","java"]);
+        setEditor.init(["java_editor_04","java"]);
+        setEditor.init(["python_editor_04","python"]);
+        setEditor.init(["java_editor_05","java"]);
+        setEditor.init(["java_editor_06","java"]);
+        setEditor.init(["java_editor_07","java"]);
+        setEditor.init(["python_editor_07","python"]);
+			</script>
+
+	</body>
+</html>

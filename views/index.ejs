@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!--
+	Striped by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<% include templates/header.ejs %>
+	</head>
+	<body>
+
+		<!-- Content -->
+			<div id="content">
+				<div class="inner">
+
+					<!-- Post -->
+						<article class="box post post-excerpt">
+							<header>
+								<!--
+									Note: Titles and subtitles will wrap automatically when necessary, so don't worry
+									if they get too long. You can also remove the <p> entirely if you don't
+									need a subtitle.
+								-->
+								<h2><a href="#">Welcome to <%= title %></a></h2>
+								<p>An online Java tutorial for CS 201 Students</p>
+							</header>
+							<p>
+								<strong>Hello!</strong> Welcome to <%= title %>, an onine tutorial for <strong>Carleton CS 201</strong> students.
+							</p>
+							<p>
+								 Observe the following "Hello, World!" programs in both Python and Java.
+							</p>
+							<div id="python_editor_01">
+							</div>
+
+							<div id="java_editor_01">
+							</div>
+							<p>
+								It is clear right away that there are some differences between the two. For one, Java requires a bit more code to run than Python does. Don't worry, this code will make sense soon enough.
+							</p>
+							<p>
+								Just as you've seen in Python, Java objects can be separated into "classes". In order for a Java program to run, it MUST be within a class named after the file that contains it. Additionally, you will see that we have defined a main method within this class. A main is required for the compiler to recognize which code it is to run first within the class file. For our purposes, code inside a class will not run unless called upon to do so my the main method, or code run by the main method. There are a few more things to note about the main method, but we'll cover that in a minute! First, Let's get things running!
+							</p>
+							<p>
+								To run a python program, you'll remember, one simply enters: "python program_name.py" and the code will run. In java, it is not that simple. The code must first be compiled into a runnable ".class file". For the helloWorld.java program above this will look like this: "javac helloWorld.java". This program can then be run like so: "java helloWorld". You'll notice that a new file has been created in your working directory. This is the class file that is run by the Java Virtual Machine.
+							</p>
+							<p>
+								Now, you'll notice the main method in the helloWorld.java program takes the argument "String[] args". This means that if you want, you can specify arguments to give the program upon running it, and it will interpret them as a list of strings. For example: "java helloWorld test1 test2" would give the main method the list ["test1","test2"] stored in the variable Args. Since we haven't told the main method how to handle any arguments, this will not change how the program runs. But suppose we modified the code to look like the following:
+							</p>
+							<div id="java_editor_02">
+							</div>
+							<p>
+								This program requires that one argument be entered after "java HelloWorld". Suppose that you entered the world "Bob" as your argument, what would the output look like?
+							</p>
+							<!-- Answer -->
+							<section class="box search">
+								<form method="post" action="#">
+									<input type="text" class="text" name="search" placeholder="Answer" />
+								</form>
+							</section>
+
+						</article>
+
+					<!-- Pagination -->
+						<div class="pagination">
+							<!--<a href="#" class="button previous">Previous Page</a>-->
+							<div class="pages">
+
+							</div>
+							<a href="/page2" class="button next">Creating Objects and Type Declaration</a>
+						</div>
+
+				</div>
+			</div>
+
+		<!-- Sidebar -->
+
+			<% include templates/sidebar.ejs %>
+
+		<!-- Scripts -->
+			<% include templates/default_scripts.ejs %>
+			<script>
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/python/example_01/helloWorld.py","python_editor_01"]);
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_01/HelloWorld.java","java_editor_01"]);
+				getFileContents.init(["https://raw.githubusercontent.com/johniblake/JavaTutor/master/example_code/java/example_02/HelloWorld2.java","java_editor_02"]);
+
+				setEditor.init(["java_editor_01","java"]);
+				setEditor.init(["python_editor_01","python"]);
+				setEditor.init(["java_editor_02","java"]);
+			</script>
+
+	</body>
+</html>
