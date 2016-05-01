@@ -14,7 +14,5 @@ class Person {
     public static void main(String[] args) {
         Person guy = new Person(5);
         guy.printHeight();
-
     }
-
 }

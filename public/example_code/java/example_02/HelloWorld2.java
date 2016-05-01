@@ -9,5 +9,4 @@ public class HelloWorld2 {
         // Prints the output.
         System.out.println("Hello, World! My name is " + name + ".");
     }
-
 }

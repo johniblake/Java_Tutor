@@ -6,5 +6,4 @@ public class ForLoop {
           System.out.println(i);
         }
     }
-
 }

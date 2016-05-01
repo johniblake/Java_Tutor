@@ -11,7 +11,6 @@ class Person{
   public void getName(){
     System.out.println("Name: " + name);
   }
-
 }
 
 public class Parent extends Person {

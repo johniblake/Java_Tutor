@@ -16,5 +16,4 @@ public class ArrayIterator {
           System.out.println(k);
         }
     }
-
 }

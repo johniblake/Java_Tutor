@@ -10,7 +10,5 @@ public class IfExample {
         }else{
             System.out.println("a and b are not equal :(");
         }
-
     }
-
 }

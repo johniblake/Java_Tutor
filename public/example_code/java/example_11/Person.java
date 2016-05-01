@@ -24,8 +24,5 @@ class Person {
         int guyHeight = guy.getHeight();
         /* You can access instance variable as follows as well */
         System.out.println("Person's height is: " + guy.height);
-
-
     }
-
 }

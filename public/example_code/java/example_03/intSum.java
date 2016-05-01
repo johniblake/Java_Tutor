@@ -7,5 +7,4 @@ public class intSum {
         \\create variable c containing sum of a and b
         System.out.println(c);
     }
-
 }

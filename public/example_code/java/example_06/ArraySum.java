@@ -6,7 +6,7 @@ public class ArraySum{
         //instantiate an ArrayList called "array"
         ArrayList<Integer> array = new ArrayList<Integer>();
         int k = 0;
-        
+
         for (int i = 0; i < 10; i++){
           array.add(1);
         }
@@ -16,5 +16,4 @@ public class ArraySum{
         //print the output
         System.out.println(k);
     }
-
 }
