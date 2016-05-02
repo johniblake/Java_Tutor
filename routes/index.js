@@ -10,29 +10,25 @@ router.get('/', function(req, res, next) {
 
 router.get('/page2', function(req, res, next) {
   res.render('page2', {
-    title: 'Java Tutor',
-    name: 'John Blake'
+    title: 'Java Tutor'
   });
 });
 
 router.get('/page3', function(req, res, next) {
   res.render('page3', {
-    title: 'Java Tutor',
-    name: 'John Blake'
+    title: 'Java Tutor'
   });
 });
 
 router.get('/page4', function(req, res, next) {
   res.render('page4', {
-    title: 'Java Tutor',
-    name: 'John Blake'
+    title: 'Java Tutor'
   });
 });
 
 router.get('/page5', function(req, res, next) {
   res.render('page5', {
-    title: 'Java Tutor',
-    name: 'John Blake'
+    title: 'Java Tutor'
   });
 });
 
