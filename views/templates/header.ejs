@@ -8,6 +8,28 @@
 <script src="assets/ace-builds-master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script type ="text/javascript" src="assets/js/getfilecontents.js"></script>
 <script type ="text/javascript" src ="assets/js/seteditor.js"></script>
+<script type="text/javascript">
+  $(function(){
+      $('#answer_1').keypress(function(e){
+        if(e.which == 13) {
+          e.preventDefault();
+          console.log('hit enter in answer field');
+					var data = document.getElementById(answer);
+          var xhr = new XMLHttpRequest();
+
+        	xhr.onreadystatechange = function() {
+        		if (xhr.readyState == 4) {
+        			// Parse the response and build the table
+        			console.log(JSON.parse(xhr.responseText));
+        		}
+        	};
+
+        	xhr.open("POST", "/endpoint", true);
+        	xhr.send(data);
+                }
+            });
+          });
+  </script>
 
 
 <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
