@@ -13,7 +13,7 @@ public class ArrayIterator {
         //print out each item of array
         for (int j = 0; j < 10; j++){
           k = array.get(j);
-          System.out.println(k);
+          System.out.print(k);
         }
     }
 }

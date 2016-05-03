@@ -54,11 +54,12 @@
 								This program requires that one argument be entered after "java HelloWorld". Suppose that you entered the world "Bob" as your argument, what would the output look like?
 							</p>
 							<!-- Answer -->
-							<section class="box search" id="answer_1">
-								<form method="post" action="#">
-									<input type="text" id="answer" class="text" name="search" placeholder="Answer" />
+							<section class="box search">
+	              <form action="endpoint">
+	                <input reference ="question1" type="text" class="answer" name="search" placeholder="Answer" />
+									<div id = "question1"></div>
 								</form>
-							</section>
+	            </section>
 
 						</article>
 

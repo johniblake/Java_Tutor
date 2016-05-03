@@ -10,34 +10,26 @@
 <script type ="text/javascript" src ="assets/js/seteditor.js"></script>
 <script type="text/javascript">
   $(function(){
-      $('#answer_1').keypress(function(e){
+      $('.answer').keypress(function(e){
         if(e.which == 13) {
           e.preventDefault();
           console.log('hit enter in answer field');
-					var data = document.getElementById('answer').value;
+					var data = $(this).val();
+          var id = this.getAttribute('reference');
+          console.log(id);
           var xhr = new XMLHttpRequest();
           xhr.open("POST", "http://localhost:3000/endpoint", true);
-          xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
         	xhr.onreadystatechange = function() {
             console.log('onreadystatechange');
         		if (xhr.readyState == 4 && xhr.status == 200) {
         			// Parse the response and build the table
-        			console.log(JSON.parse(xhr.responseText));
-              document.getElementById("response_field").innerHTML = xhr.responseText;
+        			//console.log(JSON.parse(xhr.responseText));
+              document.getElementById(id).innerHTML = xhr.responseText;
         		}
         	};
           console.log("made it here");
-        	xhr.send(data);
-          // $.ajax({
-					// 	type: 'POST',
-					// 	data: JSON.stringify(data),
-				  //   contentType: 'application/json',
-          //   url: 'http://localhost:3000/endpoint',
-          //   success: function(data) {
-          //       console.log('success');
-          //       console.log(JSON.stringify(data));
-          //   }
-          // });
+        	xhr.send(JSON.stringify({question:id, user_answer:data}));
         }
       });
     });
