@@ -25,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/page2', routes);
+app.use('/endpoint', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -57,12 +58,4 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.post('/endpoint', function(req, res){
-	var obj = {};
-	console.log('body: ' + JSON.stringify(req.body));
-	res.send(req.body);
-});
-
-
 module.exports = app;
-app.listen(8888);

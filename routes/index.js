@@ -32,4 +32,10 @@ router.get('/page5', function(req, res, next) {
   });
 });
 
+router.post('/endpoint', function(req, res){
+	var obj = {};
+	console.log('body: ' + JSON.stringify(req.body));
+	res.send(req.body);
+});
+
 module.exports = router;
