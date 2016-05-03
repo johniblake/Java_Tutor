@@ -34,10 +34,8 @@ router.get('/page5', function(req, res, next) {
 });
 
 router.post('/endpoint', function(req, res){
-	var obj = {};
 	console.log('body: ' + JSON.stringify(req.body));
   var post_data = JSON.stringify(req.body);
-  var response = "{\"hello\":\"\"}";
   console.log(typeof responseparser.regexer);
   var r = responseparser.regexer(post_data);
   console.log(r);
