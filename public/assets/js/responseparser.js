@@ -5,7 +5,7 @@ module.exports = {
     var tests = {};
     tests["question1"] = "^Hello,\\sWorld!\\sMy\\sname\\sis\\sBob.$";
     tests["question2"] = "^int\\sb\\s=\\s[0-9]+;$";
-    tests["question3"] = "^int\\sc\\s=\\sa\\s+\\sb;$";//needs alternates
+    tests["question3"] = "^int\\sc\\s=\\sa\\s\+\\sb;$";//needs alternates
     tests["question4"] = "^800$";
     tests["question5"] = "^String\\[\\]\\sstringArray\\s=\\snew\\sString\\[10\\];$";
     tests["question6"] = "^111$";
