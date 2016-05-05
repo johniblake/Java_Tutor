@@ -36,33 +36,33 @@
       });
   });
 
-  $(function(){
-      $('.upload').on(click, fucntion(e){
-        e.preventDefault();
-        console.log('hit enter in answer field');
-				var data = $(this).val();
-        var id = this.getAttribute('reference');
-        console.log(id);
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "/2/file/upload", true);
-        xhr.setRequestHeader("Host", "https://content.dropboxapi.com");
-        xhr.setRequestHeader("User-Agent", "api-explorer-client");
-        xhr.setRequestHeader("Authorization", "Bearer UvXmK2iPdfAAAAAAAAAAD7vySS8KswkwVi88TZ8dwqjmiC5ufVDNFU6COnyIHvXR");
-        xhr.setRequestHeader("Content-type", "application/octet-stream");
-        xhr.setRequestHeader("Dropbox-API-Arg", "\"/JavaTutorUploads/blakej.zip\",\"mode\":{\".tag\":\"add\"}");
-        console.log(xhr.Request);
-      	xhr.onreadystatechange = function() {
-          console.log('onreadystatechange');
-      		if (xhr.readyState == 4 && xhr.status == 200) {
-      			// Parse the response and build the table
-      			console.log(JSON.parse(xhr.responseText));
-            //document.getElementById(id).innerHTML = xhr.responseText;
-      		}
-      	};
-        console.log("made it here");
-      	xhr.send(JSON.stringify({question:id, user_answer:data}));
-      });
-  });
+  // $(function(){
+  //     $('.upload').on(click, fucntion(e){
+  //       e.preventDefault();
+  //       console.log('hit enter in answer field');
+	// 			var data = $(this).val();
+  //       var id = this.getAttribute('reference');
+  //       console.log(id);
+  //       var xhr = new XMLHttpRequest();
+  //       xhr.open("POST", "/2/file/upload", true);
+  //       xhr.setRequestHeader("Host", "https://content.dropboxapi.com");
+  //       xhr.setRequestHeader("User-Agent", "api-explorer-client");
+  //       xhr.setRequestHeader("Authorization", "Bearer UvXmK2iPdfAAAAAAAAAAD7vySS8KswkwVi88TZ8dwqjmiC5ufVDNFU6COnyIHvXR");
+  //       xhr.setRequestHeader("Content-type", "application/octet-stream");
+  //       xhr.setRequestHeader("Dropbox-API-Arg", "\"/JavaTutorUploads/blakej.zip\",\"mode\":{\".tag\":\"add\"}");
+  //       console.log(xhr.Request);
+  //     	xhr.onreadystatechange = function() {
+  //         console.log('onreadystatechange');
+  //     		if (xhr.readyState == 4 && xhr.status == 200) {
+  //     			// Parse the response and build the table
+  //     			console.log(JSON.parse(xhr.responseText));
+  //           //document.getElementById(id).innerHTML = xhr.responseText;
+  //     		}
+  //     	};
+  //       console.log("made it here");
+  //     	xhr.send(JSON.stringify({question:id, user_answer:data}));
+  //     });
+  // });
 
 
   // HTTP Request
