@@ -3,8 +3,9 @@ module.exports = {
     console.log("inside regexer");
     console.log(response_data);
     var tests = {};
-    tests["question1"] = "^Hello,\\sWorld!\\sMy\\sname\\sis\\sBob\\.$";
+    tests["question1"] = "^Hello,\\sWorld!\\sMy\\sname\\sis\\sSam\\.$";
     tests["question2"] = "^int\\sb\\s=\\s[0-9]+;$";
+    tests["question2_1"] = "^Orb\\sballoon\\s=\\snew\\sOrb();$";
     tests["question3"] = "^int\\sc\\s=\\sa\\s\\+\\sb;$";//needs alternates
     tests["question4"] = "^800$";
     tests["question5"] = "^String\\[\\]\\sstringArray\\s=\\snew\\sString\\[10\\];$";

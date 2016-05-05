@@ -13,7 +13,7 @@
 		<!-- Content -->
 			<div id="content">
 				<div class="inner">
-
+							
 					<!-- Post -->
 						<article class="box post post-excerpt">
 							<header>
@@ -26,10 +26,14 @@
 								<p>An online Java tutorial for CS 201 Students</p>
 							</header>
 							<p>
-								<strong>Hello!</strong> Welcome to <%= title %>, an onine tutorial for <strong>Carleton CS 201</strong> students.
+								<strong>Hello!</strong> Welcome to <%= title %>, an onine tutorial for <strong>Carleton CS 201</strong> students. <br>
+								This tutorial is designed to teach you the basics of Java using some of the Python experience you had in CS 111. If any of the concepts presented here prove to be tough to grasp from the examples provided, don't hesitate to check out the resources in the sidebar or the links to additional reading throughout the tutorial. Sometimes multiple explanations can be very useful! <br>
+								<br><strong>Some Rules of Thumb:</strong><br>
+								Collaboration on programming excercises is encouraged, but it is important to make sure that you completely understand the solution that you turn in. If you recieve help, or arive at a soultion with a fellow classmate, provide the appropriate credit in your comments. As always, if you are having trouble grasping a concept and feel as though you have exhausted your resources, don't hesitate to ask a fellow student or your professor for additional help.
 							</p>
 							<p>
-								 Observe the following "Hello, World!" programs in both Python and Java.
+								Here we go!<br>
+								Observe the following "Hello, World!" programs in both Python and Java.
 							</p>
 							<div id="python_editor_01">
 							</div>
@@ -40,18 +44,20 @@
 								It is clear right away that there are some differences between the two. For one, Java requires a bit more code to run than Python does. Don't worry, this code will make sense soon enough.
 							</p>
 							<p>
-								Just as you've seen in Python, Java objects can be separated into "classes". In order for a Java program to run, it MUST be within a class named after the file that contains it. Additionally, you will see that we have defined a main method within this class. A main is required for the compiler to recognize which code it is to run first within the class file. For our purposes, code inside a class will not run unless called upon to do so my the main method, or code run by the main method. There are a few more things to note about the main method, but we'll cover that in a minute! First, Let's get things running!
+								Just as you've seen in Python, Java objects are separated into <strong>classes</strong>. In order for a Java program to run, it MUST be within a class and that class MUST named after the file that contains it. For example, our HelloWorld class above is within the file "HelloWorld.java". Additionally, you will see that we have defined a method called "main" within this class. A <strong>main method</strong> is required for the Java compiler to recognize which code it needs to run first within the class file. For our purposes, code inside a class will not run unless called upon to do so my the main method, or code run by the main method. There are a few more things to note about the main method, but we'll cover that in a minute! First, let's get a java program running!
 							</p>
 							<p>
-								To run a python program, you'll remember, one simply enters: "python program_name.py" and the code will run. In java, it is not that simple. The code must first be compiled into a runnable ".class file". For the helloWorld.java program above this will look like this: "javac helloWorld.java". This program can then be run like so: "java helloWorld". You'll notice that a new file has been created in your working directory. This is the class file that is run by the Java Virtual Machine.
+								<strong>Running a Java Program:</strong><br>
+								In CS 111 you learned how to run a Python program by entering: "python program_name.py" into the terminal from within the folder of your ".py" file. Running Java is similar, but requires one additional step. Before being able to run, Java code must first be "compiled" into a runnable ".class" file. If we were to do this for the HelloWorld.java program above we would enter: "javac HelloWorld.java" to compile the program. This program can then be run like so: "java HelloWorld". If you would like, copy the code above into a text editor, and save it as "HelloWorld.java". Navigate to the file's folder using your terminal, and perform the commands you just learned to compile and run the program. You'll notice that a new file has been created in your working directory. This is the class file that is run by the Java Virtual Machine. Whenever you edit and save your ".java" file, you must "recompile" your code using the "javac" command in order for the changes you have made to take effect within your runnable ".class" file. For more discussion on what compiling is, and why it is necessary in Java, read <strong><a href ="http://www.oracle.com/technetwork/java/compile-136656.html#comp">this</a></strong>.
 							</p>
 							<p>
-								Now, you'll notice the main method in the helloWorld.java program takes the argument "String[] args". This means that if you want, you can specify arguments to give the program upon running it, and it will interpret them as a list of strings. For example: "java helloWorld test1 test2" would give the main method the list ["test1","test2"] stored in the variable Args. Since we haven't told the main method how to handle any arguments, this will not change how the program runs. But suppose we modified the code to look like the following:
+								<strong>The Main Method:</strong><br>
+								Now, you'll notice the main method in the HelloWorld.java program requires the parameter "String[] args". "args" is a special variable that stores a list of space-seperated strings entered in the command line after the java HelloWorld command. For example, running the command: "java helloWorld test1 test2" in the temrinal would result in the main method recieving the list ["test1","test2"] stored in the variable "args". Since we haven't told the main method what to do with the list of arguments, this will not change how the program runs. But suppose we modified the code to look like the following:
 							</p>
 							<div id="java_editor_02">
 							</div>
 							<p>
-								This program requires that one argument be entered after "java HelloWorld". Suppose that you entered the world "Bob" as your argument, what would the output look like?
+								This program requires that one argument be entered in the terminal after "java HelloWorld2". Suppose that you entered the string "Sam" as your argument, what would the output look like?
 							</p>
 							<!-- Answer -->
 							<section class="box search">
