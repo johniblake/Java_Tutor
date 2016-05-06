@@ -1,4 +1,4 @@
-//Parent.java
+//Student.java
 class Person{
   //super class variable name
   String name;
@@ -13,7 +13,7 @@ class Person{
   }
 }
 
-public class Parent extends Person {
+public class Student extends Person {
   //subclass constructor
   Parent(String n){
     //sets the superclass name variable to n
@@ -21,7 +21,7 @@ public class Parent extends Person {
   }
 
   public static void main(String argd[]){
-    Parent p = new Parent("Mom");
-    p.getName();
+    Student alex = new Student("Alex");
+    alex.getName();
   }
 }
