@@ -20,36 +20,29 @@
               <h2><a href="#">Inheritence, Interfaces and Subclasses</a></h2>
             </header>
             <p>
-            Clasees are really cool because they allow you to store data and specify operations that can be performed on that data. What if, however, we want to create an object that utilizes all of the same methods and data of one class, but also store additional data and methods for manipulating that data? In essence, what if we wanted to write a class that inherits all properties from some other class, while at the same time having unique properties of its own? This concept is called Inheritence, and it is at the core of what makes Object Orientation so useful.
+            Classes are really cool because they allow you to store data and specify operations that can be performed on that data. What if, however, we want to create an object that utilizes all of the same methods and data of one class, but also stores additional data and methods for manipulating that data? In essence, what if we wanted to write a class that inherits all properties from some other class, while at the same time having unique properties of its own? This concept is called <strong>Inheritence</strong>, and it is at the core of what makes <a href ="https://en.wikipedia.org/wiki/Object-oriented_programming">Object Orientated</a> languages like Java so useful.
           </p>
 
           <p>
-            Subclasses:<br>
+            <strong>Subclasses:</strong><br>
             <br>
-            The class which inherits properties from another class is called a subclass, while the class whose properties are inherited is known as the superclass. In order to express that we want our class to inherit the properties of another class, we use the "extends" keyword like so:
+            The class which inherits properties from another class is called a <strong>subclass</strong>, while the class whose properties are inherited is known as the <strong>superclass</strong>. In order to express that we want our class to inherit the properties of another class, we use the "extends" keyword like so:
           </p>
             <div id ="java_editor_12"></div>
           <p>
-            Below is example code to walk you through the creation of a subclass of Person, called Parent.
+            Below is example code to walk you through the creation of a subclass of Person, called Student.
           </p>
-
             <div id ="java_editor_13"></div>
           <p>
             The compiled code will produce the following result:<br>
             <br>
-            Name: Mom<br>
+            Name: Alex<br>
             Height: 6<br>
-            Age: 35<br>
+            Age: 20<br>
             <br>
           </p>
           <p>
-            The Superclass reference variable can hold the subclass object, but using that variable you can access only the members of the superclass, so to access the members of both classes it is recommended to always create reference variable to the subclass.
-          </p>
-          <p>
-            If you consider the above program you can instantiate the class as given below as well. But using the superclass reference variable ( person in this case ) you cannot call the method setAge(), which belongs to the subclass Parent.
-          </p>
-          <p>
-            Something to note here is that, while a subclass inhereits all methods, fields, and nested classes of a superclass, it does not inherit its constructor. However, the constructor of a superclass can be invoked from the subclass. This is done using the "super" keyword. If a class is inheriting the properties of another class. And if the members of the superclass have the names same as the sub class, to differentiate these variables we use super keyword like so:<br>
+            Something to note here is that, while a subclass inherits all methods, fields, and nested classes of a superclass, it does not inherit its constructor. However, the constructor of a superclass can be invoked from the subclass. This is done using the "super" keyword. If a class is inheriting the properties of another class. And if the members of the superclass have the names same as the sub class, to differentiate these variables we use super keyword like so:<br>
             <br>
             super.variable<br>
             super.method();<br>
@@ -59,19 +52,14 @@
             The following program uses the super keyword to call the contructor of the Person class from the Parent subclass.
           </p>
           <div id ="java_editor_15"></div>
-
-            Is-A relationship?
-
-            Has-A relationship?
-
+					<p>
+          The relationship between a subclass and a superclass is often termed an "Is-A" relationship. This is because a subclass is a version of its super class. This relationship can be used to associate many subclasses which extend the same superclass, because an instance of each of those subclasses is a version of the superclass. So, if we know a bunch of different class object extend the same superclass, we can perform the methods and access the variables of those objects that we know belong to the superclass. This may be important if we want to perform opperations on a bunch of different objects in the same way without knowing their exact type.
+					</p>
+          Sometimes, we want our subclasses to "override" methods of the superclass...
+					[overriding example]
+					
           <p>
-            It is important to note that the only possible way to access an object (Parent) is through a reference variable (mom). A reference variable can be of only one type (in this case Parent). Once declared, the type of a reference variable cannot be changed. However, the reference variable can be reassinged to access another object given that that object is of the same type or a subtype of its declared type.
-          </p>
-          <p>
-            Write a program called Child.java, where Child is a subclass of Person. Give Child some attributes and methods
-          </p>
-          <p>
-          Interfaces:<br>
+          <strong>Interfaces:</strong><br>
           <br>
           <p>
             An interface is another reference type in Java. Similar to class, it is a collection of abstract methods. A class "implements" an interface in order to inherit the abstract methods of the interface.<br>

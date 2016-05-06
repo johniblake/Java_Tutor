@@ -35,12 +35,12 @@
               In the Java code above, the constructor is named after the class (i.e. "Person()" instead of "__init__()") and takes only the parameter h, which is an integer. As in Python, at least one constructor must be invoked upon creating a new class object.
             </p>
             <p>
-              You may be asking yourself: What's with the words "Public" and "void" in the method declaration? What do they do? "Public" specifies that the method can be called from outside of the class. If the modifier were to instead be "Private", the method could only be accessed from other methods inside the class. The "void" portion is the return type of the method. In this case, the method returns nothing so we specify that its return type be "void". Say for example, your method returned an Integer. We would speficy this keyword to be "Integer". Now, how might we construct an Object from a class?
+              You may be asking yourself: What's with the words "public" and "void" in the method declaration? What do they do? "public" specifies that the method can be called from outside of the class. If the modifier were to instead be "private", the method could only be accessed from other methods inside the class. This goes for class variables as well. The "void" keyword is the return type of the method. In this case, the method returns nothing so we specify that its return type be "void". Say for example, your method returns an Integer. In this case, we would specify the return type keyword to be "Integer".
             </p>
             <p>
-              There are three steps when creating an object from a class:<br>
+              Recall that there are three steps when creating an object from a class:<br>
                 <br>
-                <b>Declaration:</b> A variable declaration with a variable name with an object type.<br>
+                <b>Declaration:</b> A variable and its type are declared<br>
                 <br>
                 <b>Instantiation:</b> The 'new' key word is used to create the object.<br>
                 <br>
@@ -71,8 +71,28 @@
 							</form>
             </section>
             <p>
-              Write a version of Person.java that creates an arrayList of 5 People Objects and sorts them according to height, printing their names from tallest person to the shortest. The people objects should have the following name, height values: (George: 5), (Jen: 6), (Otis: 4}), (Max: 7), (Amy: 8).
             </p>
+						<section class="box text-style1">
+							<h3>Excercise 2</h3>
+							<div class = "inner">
+		            <p>
+		              Write a version of Person.java that creates an ArrayList of Person objects and sorts them according to height, printing their names from tallest person to the shortest.  <br>
+									<br>
+									<strong>Your ArrayList Should Contain:</strong><br>
+									Five Person objects with these exact name and height values: (George: 5), (Jen: 6), (Otis: 4), (Max: 7), (Amy: 8)<br>
+									<br>
+									<strong>Required Output:</strong><br>
+									Amy<br>
+									Max<br>
+									Jen<br>
+									George<br>
+									Otis<br>
+									<br>
+									<strong>Turn-in Details:</strong> <br>
+									Compress your finished java file to the .zip format and rename the zip file to be your Carleton email handle with the .zip extension on the end. Upload this file below.<br>
+		            </p>
+							</div>
+						</section>
 
           </article>
 
@@ -88,7 +108,7 @@
 
 		<!-- Sidebar -->
 			<% include templates/sidebar.ejs %>
-			
+
 		<!-- Scripts -->
       <% include templates/default_scripts.ejs %>
 			<script>

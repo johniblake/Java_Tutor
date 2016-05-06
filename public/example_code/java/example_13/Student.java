@@ -1,4 +1,4 @@
-//Parent.java
+//Student.java
 class Person {
     String name;
     int height;
@@ -11,7 +11,7 @@ class Person {
     }
 }
 
-class Parent extends Person {
+class Student extends Person {
   //new subclass variable age;
   int age;
   //new subclass method setAge;
@@ -27,14 +27,14 @@ class Parent extends Person {
 
   public static void main(String[] args) {
       //Instantiate subclass
-      Parent mom = new Parent();
+      Student alex = new Student();
       //Set name to "Mom" by invoking the superclass setName method
-      mom.setName("Mom");
+      alex.setName("Alex");
       //invoke the setHeight method of the superclass
-      mom.setHeight(6);
+      alex.setHeight(6);
       //invoke the setAge method of the subclass
-      mom.setAge(35);
+      alex.setAge(20);
       //print all variables using the display function
-      mom.display();
+      alex.display();
   }
 }

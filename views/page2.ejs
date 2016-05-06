@@ -42,7 +42,7 @@
               </div>
             </section>
           <p>
-						A variable's type determines the values that it may contain, and the operations that may be performed on it. Once a variable is declared to be of a certain type, you no longer need to mention its type when referencing it. In fact, doing so will produce an error because type declaration can only be done when declaring a new variable. So, for example, you wanted to change the value of "number" to 6 you would simply write:
+						A variable's type determines the values that it may contain, and the operations that may be performed on it. Once a variable is declared to be of a certain type, you no longer need to mention its type when referencing it. In fact, doing so will produce an error because type declaration can only be done when declaring a new variable. Additionally, it is important to note that the type of a variable cannot be changed. However, the variable can be reassinged to access another object given that that object is of the same type or a subtype of its declared type. So, for example, you wanted to change the value of "number" to 6 you would simply write:
 					</p>
 					<section class="box text-style1">
 						<div class="inner">
@@ -79,7 +79,7 @@
 						</form>
 					</section>
 					<p>
-						<strong>Class Instantiation</strong><br>
+						<strong>Creating Objects</strong><br>
 						In the Cat and int examples above, you probably noticed that an int and a Cat are not created in the same way. Unlike primitives, objects of a certain class type are individual "instances" of that class. Thus, whenever we want to create a new instance of a class (a new object), Java requires the use of the keyword "new". Here's how we would create a new object of type "Ball" named "basketball":
 					</p>
 					<section class="box text-style1">
@@ -89,7 +89,9 @@
 							</p>
 						</div>
 					</section>
-					Because creating a new object requires creating a new instance of a class, the process of bringing this new instance into existance is called <strong>instantiation</strong>. You can find more information on declaring variables and instantiating objects <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html">here</a>.<br>
+					<p>
+						 Because creating a new object requires creating a new instance of a class, the process of bringing this new instance into existance is called <strong>instantiation</strong>. The portion of the code that comes after "new" (in this case "Ball();") is a call to the <string>constructor</strong> of the specified class, which initializes a new instance of that class. <strong>Initialization</strong> is the process of filling the newly created class object with actual data. We will talk more in depth about constructors in the section titled "Classes, Objects, Class Methods & Variables". You can find more information on declartion, instantiation and initialization  <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html">here</a>.
+					</p>
 					<br>
 					<strong>Final Check:</strong><br>
 					Write the line of code that instantiates a new object called "balloon" of class "Orb":
