@@ -1,11 +1,10 @@
 var express = require('express');
 var path = require('path');
+var fs = require('fs-extra');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var Dropbox = require('dropbox');
-var client = new Dropbox.Client({ key : "UvXmK2iPdfAAAAAAAAAACqOAKiMGPaOw9nevnBFJtIIV0-4nn15EfDIicaUpJpwX" });
 var routes = require('./routes/index');
 var page2 = require('./routes/page2');
 
@@ -23,9 +22,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'routes')));
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use('/', routes);
 app.use('/endpoint', routes);
+app.use('/upload', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
